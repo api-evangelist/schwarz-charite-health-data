@@ -1,0 +1,85 @@
+generated: '2026-09-02'
+method: searched
+source: https://openehr.org/industry-partners/
+note: >-
+  Schwarz Charite Health Data GmbH publishes no machine-readable contract - no OpenAPI, GraphQL SDL,
+  AsyncAPI, MCP manifest, WSDL or .proto was found on any host (see x-coverage in apis.yml). Every
+  standard below is therefore recorded from the company's own and its partners' published prose, NOT
+  from a spec we could parse. `verification` says which is which: `membership` means the standards body
+  itself lists the company; `claimed` means the company or its parent states it in a press or product
+  page; nothing here is `contract` because there is no contract to read. No conformance is asserted
+  beyond what those sources say.
+standards:
+- id: openehr
+  name: openEHR
+  conforms: true
+  verification: membership
+  evidence: >-
+    openEHR International lists "Schwarz Charite Health Data" (Germany) on its industry-partners page,
+    with the company profile describing the HIVEPRO platform. HiGHmed and product write-ups describe the
+    HIVEPRO core as an openEHR-based Clinical Data Repository.
+  evidence_url: https://openehr.org/industry-partners/
+- id: aql
+  name: Archetype Query Language (openEHR AQL)
+  conforms: true
+  verification: claimed
+  evidence: >-
+    HIVEPRO product description states the Clinical Data Repository stores data in a relational database
+    queried with Archetype Query Language (AQL).
+  evidence_url: https://www.highmed.org/de/news/schwarz-charit%C3%A9-health-data-gmbh
+- id: hl7-fhir
+  name: HL7 FHIR
+  conforms: true
+  verification: claimed
+  evidence: >-
+    HIVEPRO product description states the platform communicates over HL7/FHIR, including compatibility
+    with the German Medical Informatics Initiative (MII) core dataset. No FHIR CapabilityStatement or
+    base URL is published, so the FHIR surface could not be probed.
+  evidence_url: https://www.highmed.org/de/news/schwarz-charit%C3%A9-health-data-gmbh
+- id: mii-core-dataset
+  name: Medizininformatik-Initiative (MII) Kerndatensatz
+  conforms: true
+  verification: claimed
+  evidence: >-
+    Stated compatibility with the MII core dataset; the platform's lineage is the BMBF-funded HiGHmed
+    consortium, an MII consortium active since 2016.
+  evidence_url: https://www.highmed.org/de/news/schwarz-charit%C3%A9-health-data-gmbh
+- id: omop-cdm
+  name: OHDSI OMOP Common Data Model
+  conforms: false
+  verification: claimed-support-not-conformance
+  evidence: >-
+    Product description says HIVEPRO "supports other systems such as OMOP-compliant applications" -
+    that is interoperability with OMOP consumers, not a claim that the platform itself is an OMOP CDM
+    implementation. Recorded as not-conformant rather than over-reading the sentence.
+  evidence_url: https://www.highmed.org/de/news/schwarz-charit%C3%A9-health-data-gmbh
+- id: gdpr
+  name: EU GDPR / German data residency
+  conforms: true
+  verification: claimed
+  evidence: >-
+    Both the Schwarz Digits and Charite press releases state the platform runs on STACKIT's sovereign
+    cloud, that data sovereignty remains entirely in Germany, and that it meets European data-protection
+    standards. No certificate, audit report or trust center was published to substantiate this.
+  evidence_url: https://schwarz-digits.de/en/presse/archive/2026/charite-and-schwarz-digits-establish-joint-venture
+- id: oauth2
+  conforms: false
+  verification: not-found
+  evidence: No OAuth or OIDC discovery document was served on any known host; /.well-known probes all 404.
+- id: rfc9457
+  conforms: false
+  verification: not-found
+  evidence: No published error contract or spec to read.
+domain_standard:
+  market: clinical health data / electronic health records (Germany, EU)
+  standard: openEHR
+  declared_in_contract: false
+  note: >-
+    openEHR is the domain standard for this market and the company is a listed openEHR industry partner,
+    but domain_standard_conformance is meant to read a contract signature (an archetype/template URI, an
+    AQL endpoint, a FHIR CapabilityStatement). No contract is published, so the signature cannot be
+    confirmed and this is recorded as a membership signal only.
+  candidate_signatures_to_probe_next_round:
+  - openEHR REST API (/ehrbase/rest/openehr/v1) on any future HIVEPRO tenant host
+  - AQL query endpoint (/rest/openehr/v1/query/aql)
+  - HL7 FHIR CapabilityStatement (/fhir/metadata)

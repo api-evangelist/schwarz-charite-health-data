@@ -1,0 +1,50 @@
+# Schwarz Charite Health Data
+
+> Schwarz Charite Health Data GmbH is a German health-data joint venture announced on 2026-03-20 by
+> Charite - Universitaetsmedizin Berlin (25%) and Schwarz Digits (75%), the IT and digital arm of the
+> Schwarz Group. It brings the HIVEPRO platform to market: an openEHR-based Clinical Data Repository
+> queried with Archetype Query Language (AQL), exchanging data over HL7 FHIR (including the German
+> Medical Informatics Initiative core dataset) and feeding OMOP-compliant analytics, delivered as a
+> managed service on STACKIT's sovereign cloud so data residency stays in Germany.
+
+## What an agent can call today
+
+Nothing. As of 2026-09-02 this company publishes no API. There is no website of its own, no developer
+portal, no documentation host, no API reference, no OpenAPI/GraphQL/AsyncAPI/MCP/WSDL/gRPC contract, no
+SDK, no CLI, no sandbox, no status page and no pricing page. Every named /.well-known/ path on the only
+host associated with the company (schwarz-digits.de, its parent) returned HTTP 404, negative control
+included. Do not attempt to construct a base URL or an endpoint for this provider; none is published.
+
+## Company
+
+- [Schwarz Digits (parent, 75%)](https://schwarz-digits.de/): the operating company's only public web presence.
+- [Joint-venture announcement, 2026-03-20](https://schwarz-digits.de/en/presse/archive/2026/charite-and-schwarz-digits-establish-joint-venture): the primary source for the venture, its ownership split, its managing directors and the HIVEPRO platform.
+- [Charite press release](https://www.charite.de/service/pressemitteilung/artikel/detail/charite_und_schwarz_digits_gruenden_joint_venture/): the hospital partner's account of the same announcement.
+- [HiGHmed on the new company](https://www.highmed.org/de/news/schwarz-charit%C3%A9-health-data-gmbh): states that Schwarz Charite Health Data GmbH now owns and operates HIVEPRO, and describes the platform's openEHR / AQL / FHIR / OMOP technical profile.
+- [openEHR industry partners](https://openehr.org/industry-partners/): openEHR International's own listing of the company, the source this profile was harvested from.
+
+## Standards
+
+- openEHR - Clinical Data Repository core; company is a listed openEHR International industry partner.
+- Archetype Query Language (AQL) - the query surface of the repository.
+- HL7 FHIR - stated interoperability surface, including the MII core dataset.
+- OMOP CDM - stated support for OMOP-compliant consuming applications (interoperability, not an OMOP implementation).
+- STACKIT sovereign cloud / EU GDPR - stated hosting and data-residency posture.
+
+Standards are recorded from published prose, not from a parsed contract. See
+conformance/schwarz-charite-health-data-conformance.yml for what is membership-verified versus claimed.
+
+## Artifacts in this profile
+
+- [apis.yml](apis.yml)
+- [conformance/schwarz-charite-health-data-conformance.yml](conformance/schwarz-charite-health-data-conformance.yml)
+- [security/schwarz-charite-health-data-domain-security.yml](security/schwarz-charite-health-data-domain-security.yml)
+- [well-known/schwarz-charite-health-data-well-known.yml](well-known/schwarz-charite-health-data-well-known.yml)
+- [plans/schwarz-charite-health-data-plans-pricing.yml](plans/schwarz-charite-health-data-plans-pricing.yml)
+- [rate-limits/schwarz-charite-health-data-rate-limits.yml](rate-limits/schwarz-charite-health-data-rate-limits.yml)
+- [packages/schwarz-charite-health-data-packages.yml](packages/schwarz-charite-health-data-packages.yml)
+
+## Not this company
+
+- hivepro.com / app.hivepro.cloud belong to Hive Pro, an unrelated cybersecurity vendor. Do not associate them with HIVEPRO the health-data platform.
+- github.com/highmed and the HIVEconnect FHIR-to-openEHR broker belong to the HiGHmed consortium / HiGHmed e.V., not to this joint venture.

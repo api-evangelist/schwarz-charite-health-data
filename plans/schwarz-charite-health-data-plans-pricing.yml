@@ -1,0 +1,21 @@
+generated: '2026-09-02'
+method: searched
+source: https://schwarz-digits.de/en/presse/archive/2026/charite-and-schwarz-digits-establish-joint-venture
+plan_count: 0
+plans: []
+note: >-
+  No pricing is published. Schwarz Charite Health Data GmbH has no website, no product page and no
+  pricing page of its own; HIVEPRO is sold to hospital and clinic operators as a managed cloud service
+  and no tiers, list prices, quotas or overage terms appear anywhere on the company's or its parents'
+  public surface. This is an enterprise, contact-the-parent motion - the only published contact is the
+  Schwarz Digits press office (presse@digits.schwarz). Recorded as an honest zero, not an omission.
+searched:
+- url: https://schwarz-digits.de/en/presse/archive/2026/charite-and-schwarz-digits-establish-joint-venture
+  status: 200
+  finding: joint-venture announcement; no pricing
+- url: https://openehr.org/industry-partners/
+  status: 200
+  finding: industry-partner listing; no pricing
+- url: https://www.highmed.org/en/hivepro
+  status: 404
+  finding: former HIVEPRO product page now returns 404

@@ -1,0 +1,33 @@
+generated: '2026-09-02'
+method: searched
+source: registry and web search, 2026-09-02
+package_count: 0
+packages: []
+note: >-
+  No first-party client library was found for Schwarz Charite Health Data GmbH or its HIVEPRO platform.
+  The company ships no SDK, no CLI and no public source repository; it has no GitHub organization. The
+  github.com/highmed organization carries HiGHmed consortium software (highmed-dsf, cohort-explorer,
+  SmICS) and HIVEconnect is published by HiGHmed e.V. with Medblocks - those belong to the HiGHmed
+  consortium, NOT to this joint venture, so nothing from them is recorded here as first-party. No SDKs
+  pointer is wired in apis.yml.
+registries_searched:
+- registry: npm
+  result: no first-party package
+- registry: pypi
+  result: no first-party package
+- registry: maven-central
+  result: no first-party package
+- registry: nuget
+  result: no first-party package
+- registry: pkg.go.dev
+  result: no first-party package
+- registry: rubygems
+  result: no first-party package
+- registry: packagist
+  result: no first-party package
+- registry: crates.io
+  result: no first-party package
+- registry: github
+  result: >-
+    no organization named for this company; github.com/highmed is the HiGHmed research consortium and is
+    not attributable to Schwarz Charite Health Data GmbH

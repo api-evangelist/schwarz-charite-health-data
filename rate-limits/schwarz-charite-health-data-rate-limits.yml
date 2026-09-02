@@ -1,0 +1,11 @@
+generated: '2026-09-02'
+method: searched
+source: https://schwarz-digits.de/en/presse/archive/2026/charite-and-schwarz-digits-establish-joint-venture
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are documented, because no API is documented. Schwarz Charite Health Data GmbH publishes
+  no developer portal, no API reference and no machine-readable contract, so there are no per-key,
+  per-account or per-endpoint limits to record, no RateLimit-*/X-RateLimit-*/Retry-After response headers
+  to observe, and no exhaustion status code. An honest zero from a searched pass, not an unchecked field.
